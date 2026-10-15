@@ -1,12 +1,14 @@
-from pypdf import PdfReader
+import fitz
 
 # Fonction qui lit un PDF et retourne une liste de pages avec leur texte
 def read_pdf(path):
-    reader = PdfReader(path)
     pages = []
-    for i, page in enumerate(reader.pages):
-        pages.append({"page": i + 1, "text": page.extract_text()})
+    with fitz.open(path) as doc:
+        for i, page in enumerate(doc):
+            pages.append({"page": i + 1, "text": page.get_text()})
     return pages
+
+
 
 # Fonction qui découpe un texte en morceaux de taille maximale "size" avec un chevauchement "overlap"
 def chunk_text(text, size=800, overlap=150):

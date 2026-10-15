@@ -1,0 +1,48 @@
+1- Question (vide pour quitter) : What are the three boundary settings compared in the paper?
+
+Based on the provided excerpts, the three boundary settings are:
+
+1. **Open chain**: interactions stop at the ends [PDF2 p.2].
+2. **Loop**: cyclic, wrap-around, where interactions connect the last bus to the first [PDF2 p.2].
+3. **Bi-infinite**: an idealization with no ends, where interactions extend indefinitely [PDF2 p.2].
+
+Passages consultés : PDF2 p.20, PDF2 p.22, PDF2 p.37, PDF2 p.4, PDF2 p.23, PDF2 p.2
+**Correct**
+
+2- Question (vide pour quitter) : Which mathematical methods are used to derive the stability conditions?
+
+Based on the extracts, the mathematical methods and structural properties used to derive the stability conditions include:
+
+* **Triangularity:** For leader-only kernels on open chains, triangularity is used to establish the $f_0$-only stability criterion ($|f_0| < 1$) [PDF2 p.8, PDF2 p.13].
+* **Eigenvalue analysis of tridiagonal Toeplitz matrices:** For two-sided three-tap open chains, the dynamics matrix ($A_o^{\pm}$) is a tridiagonal Toeplitz matrix, from which exact eigenvalues are computed to characterize Schur stability [PDF2 p.12].
+* **Fourier decomposition:** On finite loops, Fourier decomposition and the evaluation of the gains $|\mathcal{F}(z_q)|$ across all spatial Fourier modes/multipliers are used to establish the exact Schur stability criterion [PDF2 p.3, PDF2 p.14].
+* **Coefficient-sum test:** A sufficient condition for loop stability is provided by the coefficient-sum test ($\sum_p |f_p| < 1$) [PDF2 p.23].
+
+Passages consultés : PDF2 p.2, PDF2 p.22, PDF2 p.23, PDF2 p.12, PDF2 p.3, PDF2 p.14, PDF2 p.8, PDF2 p.13
+**Correct**
+
+3- Question (vide pour quitter) : Can the same control coefficients be stable on an open chain but unstable on a loop?
+
+Oui, les mêmes coefficients de contrôle peuvent être stables sur une chaîne ouverte mais instables sur une boucle [PDF2 p.14], [PDF2 p.15], [PDF2 p.39]. 
+
+En effet, un noyau stable sous troncature en chaîne ouverte peut violer la stabilité de Schur sur une boucle [PDF2 p.14]. Par exemple :
+- Pour $N = 3$ et les coefficients $(f_0, f_1, f_{-1}) = (0,5, 0,3, 0,3)$, le rayon spectral est d'environ $0,924 < 1$ sur la chaîne ouverte (stable), alors qu'il atteint $1,1 > 1$ sur la boucle (instable) [PDF2 p.15].
+- Pour $K_2 = (0,25, -0,8)$ avec $N = S = 12$, la chaîne ouverte est stable avec un rayon spectral de 0,25, tandis que la boucle reste instable avec un rayon spectral de 1,05 [PDF2 p.39].
+
+Passages consultés : PDF2 p.23, PDF2 p.2, PDF2 p.1, PDF2 p.15, PDF2 p.9, PDF2 p.21, PDF2 p.14, PDF2 p.39
+**Correct**
+Réponse en français !!!!
+
+4- Question (vide pour quitter) : What city or dataset was used in the numerical experiments?
+
+Je ne trouve pas la réponse dans les documents.
+
+Passages consultés : PDF2 p.25, PDF2 p.26, PDF2 p.28, PDF2 p.30, PDF2 p.27, PDF2 p.24
+**Correct**
+
+Question (vide pour quitter) : Quel est le prix de l’essence ?
+
+Je ne trouve pas la réponse dans les documents.
+
+Passages consultés : PDF2 p.42, PDF2 p.24, PDF2 p.18, PDF2 p.4, PDF2 p.19, PDF2 p.14, PDF2 p.13
+**Correct**
