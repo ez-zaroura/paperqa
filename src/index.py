@@ -16,6 +16,8 @@ def add_chunks(chunks):
         metadatas=[{"source": c["source"], "page": c["page"]} for c in chunks],
     )
 
+
+# Fonction de recherche dans la collection: k est le nombre de passages que tu veux récupérer
 def search(question, k=4):
-    q_emb = model.encode([question]).tolist()
-    return collection.query(query_embeddings=q_emb, n_results=k)
+    q_emb = model.encode([question]).tolist() #Les crochets créent une liste contenant la question. Le modèle peut ainsi traiter une ou plusieurs phrases sous forme de lot (batch).
+    return collection.query(query_embeddings=q_emb, n_results=k) # recherche dans la collection en utilisant l'embedding de la question et récupère les k résultats les plus proches, en utilisant la distance L2

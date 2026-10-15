@@ -1,6 +1,6 @@
 from pypdf import PdfReader
 
-
+# Fonction qui lit un PDF et retourne une liste de pages avec leur texte
 def read_pdf(path):
     reader = PdfReader(path)
     pages = []
@@ -8,7 +8,7 @@ def read_pdf(path):
         pages.append({"page": i + 1, "text": page.extract_text()})
     return pages
 
-
+# Fonction qui découpe un texte en morceaux de taille maximale "size" avec un chevauchement "overlap"
 def chunk_text(text, size=800, overlap=150):
     if overlap >= size:
         raise ValueError("overlap doit être plus petit que size")
