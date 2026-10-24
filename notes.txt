@@ -46,3 +46,56 @@ Je ne trouve pas la réponse dans les documents.
 
 Passages consultés : PDF2 p.42, PDF2 p.24, PDF2 p.18, PDF2 p.4, PDF2 p.19, PDF2 p.14, PDF2 p.13
 **Correct**
+
+
+
+
+Évaluation PaperQA : 20 questions, k=8, modèle=gemini-3.8-flash
+-------size=500/ overlap= 100:
+Recherche : la bonne PAGE est-elle dans les k premiers résultats ?
+  hit@1: 7/17 (41 %)
+  hit@3: 15/17 (88 %)
+  hit@5: 17/17 (100 %)
+  hit@8: 17/17 (100 %)
+Recherche : le MORCEAU retrouvé contient-il la réponse (chiffres/mots attendus) ?
+  hit@1 (contenu): 2/17 (12 %)
+  hit@3 (contenu): 6/17 (35 %)
+  hit@5 (contenu): 11/17 (65 %)
+  hit@8 (contenu): 11/17 (65 %)
+
+  -------size=800/ overlap= 150:
+  Recherche : la bonne PAGE est-elle dans les k premiers résultats ?
+  hit@1: 5/17 (29 %)
+  hit@3: 12/17 (71 %)
+  hit@5: 15/17 (88 %)
+  hit@8: 17/17 (100 %)
+Recherche : le MORCEAU retrouvé contient-il la réponse (chiffres/mots attendus) ?
+  hit@1 (contenu): 4/17 (24 %)
+  hit@3 (contenu): 10/17 (59 %)
+  hit@5 (contenu): 12/17 (71 %)
+  hit@8 (contenu): 15/17 (88 %)
+
+  -------size=350/ overlap= 70:
+Recherche : la bonne PAGE est-elle dans les k premiers résultats ?
+  hit@1: 10/17 (59 %)
+  hit@3: 17/17 (100 %)
+  hit@5: 17/17 (100 %)
+  hit@8: 17/17 (100 %)
+Recherche : le MORCEAU retrouvé contient-il la réponse (chiffres/mots attendus) ?
+  hit@1 (contenu): 4/17 (24 %)
+  hit@3 (contenu): 10/17 (59 %)
+  hit@5 (contenu): 11/17 (65 %)
+  hit@8 (contenu): 12/17 (71 %)
+
+
+  -------size=1200/ overlap= 200:
+Recherche : la bonne PAGE est-elle dans les k premiers résultats ?
+  hit@1: 9/17 (53 %)
+  hit@3: 15/17 (88 %)
+  hit@5: 17/17 (100 %)
+  hit@8: 17/17 (100 %)
+Recherche : le MORCEAU retrouvé contient-il la réponse (chiffres/mots attendus) ?
+  hit@1 (contenu): 5/17 (29 %)
+  hit@3 (contenu): 12/17 (71 %)
+  hit@5 (contenu): 14/17 (82 %)
+  hit@8 (contenu): 16/17 (94 %)
