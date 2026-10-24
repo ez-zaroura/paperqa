@@ -1,10 +1,9 @@
-# PaperQA
 
 Assistant de questions-réponses sur des articles de recherche (PDF) : il retrouve les passages
 pertinents, les donne à un LLM (Gemini) et répond **en citant le fichier et la page**.
 Si la réponse n'est pas dans les documents, il le dit au lieu d'inventer.
 
-Projet personnel (octobre 2026, en cours) pour apprendre à construire un système RAG de bout en bout :
+Projet personnel (octobre 2026) pour apprendre à construire un système RAG de bout en bout :
 ingestion, recherche vectorielle, génération, API, tests et **évaluation chiffrée**.
 
 ## Comment ça marche
