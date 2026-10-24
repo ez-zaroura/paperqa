@@ -1,0 +1,162 @@
+[
+  {
+    "id": "q01", "type": "factuelle", "source": "PDF3",
+    "question": "How many violent events and fatalities were recorded in North Africa in 2025?",
+    "expected_answer": "413 violent events and 360 fatalities across Algeria, Libya, Morocco and Tunisia (a 63% increase in events over 2024).",
+    "expected_pages": [2],
+    "must_contain": [["413"], ["360"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q02", "type": "factuelle", "source": "PDF3",
+    "question": "How many violent events and fatalities did West Africa experience in 2025?",
+    "expected_answer": "12,811 violent events and 26,699 fatalities (increases of 22% and 4% over 2024).",
+    "expected_pages": [3],
+    "must_contain": [["12,811", "12 811", "12811", "12.811"], ["26,699", "26 699", "26699", "26.699"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q03", "type": "factuelle", "source": "PDF3",
+    "question": "What was the average number of fatalities per violent event in West Africa in 2024 and in 2025?",
+    "expected_answer": "2.4 fatalities per event in 2024 and 2.1 in 2025, a 15% decline.",
+    "expected_pages": [3],
+    "must_contain": [["2.4", "2,4"], ["2.1", "2,1"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q04", "type": "factuelle", "source": "PDF3",
+    "question": "Which Nigerian state is the single most lethal in 2025, and how many fatalities did it record?",
+    "expected_answer": "Borno state, with 3,856 fatalities.",
+    "expected_pages": [4],
+    "must_contain": [["borno"], ["3,856", "3 856", "3856", "3.856"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q05", "type": "factuelle", "source": "PDF3",
+    "question": "How many cells does the Spatial Conflict Dynamics indicator (SCDi) grid contain, and what is the size of each cell?",
+    "expected_answer": "6,540 cells of 50 km by 50 km, covering 21 countries in North and West Africa.",
+    "expected_pages": [8],
+    "must_contain": [["6,540", "6 540", "6540", "6.540"], ["50"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q06", "type": "factuelle", "source": "PDF3",
+    "question": "According to Box 1, when is a cell classified as high intensity in the SCDi?",
+    "expected_answer": "When four or more violent events occur in the cell in a given year (generational mean of about 0.0017 events per square km per year).",
+    "expected_pages": [9],
+    "must_contain": [["four", "4 ", "quatre"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q07", "type": "factuelle", "source": "PDF3",
+    "question": "How many cells were classified into one of the four SCDi conflict types in 2025, and how does that compare with 2024?",
+    "expected_answer": "805 cells, a new high in the 29-year series and a 17% increase over 2024.",
+    "expected_pages": [10],
+    "must_contain": [["805"], ["17"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q08", "type": "factuelle", "source": "PDF3",
+    "question": "What are the 2026 projections for total violent events and fatalities across the 21 study countries?",
+    "expected_answer": "About 15,400 violent events (+17%) and about 32,500 fatalities (+20%).",
+    "expected_pages": [17, 19],
+    "must_contain": [["15,400", "15 400", "15400", "15,401", "15 401", "15.400"], ["32,500", "32 500", "32500", "32,510", "32 510", "32.500"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q09", "type": "raisonnement", "source": "PDF3",
+    "question": "Why does the report say per-event lethality in West Africa is declining, and what share of events and fatalities does the Central Sahelian conflict zone account for?",
+    "expected_answer": "Conflict is spreading into new locations where violence is frequent but less intense, while core locations remain extraordinarily deadly. The Central Sahelian zone accounts for 26% of regional events but 44% of fatalities.",
+    "expected_pages": [3],
+    "must_contain": [["26"], ["44"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q10", "type": "raisonnement", "source": "PDF3",
+    "question": "How do the 2026 projections for Mali and Burkina Faso differ?",
+    "expected_answer": "Both have essentially flat event totals, but Mali's fatalities are projected to rise by about 42% while Burkina Faso's would fall by about 27%.",
+    "expected_pages": [18, 19],
+    "must_contain": [["42"], ["27"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q11", "type": "raisonnement", "source": "PDF3",
+    "question": "Cameroon has more violent events than Burkina Faso and Mali, yet fewer fatalities. What explains this?",
+    "expected_answer": "Cameroon recorded 3,401 events but 1,857 fatalities, versus 5,263 for Burkina Faso and 3,928 for Mali. The Anglophone Crisis involves a high frequency of incidents at very low per-event lethality, consistent with guerrilla tactics and reprisals.",
+    "expected_pages": [4, 6],
+    "must_contain": [["1,857", "1 857", "1857", "1.857"], ["anglophone"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q12", "type": "raisonnement", "source": "PDF3",
+    "question": "How did the initial state of newly affected conflict cells in 2025 differ from the historical average?",
+    "expected_answer": "Historically about 33% of new cells entered as clustered high-intensity (CH) and about 67% as low-intensity (CL or DL). In 2025, 37% entered as CH plus 7% as DH, and low-intensity entries fell to 56% (35% CL and 21% DL).",
+    "expected_pages": [13, 14],
+    "must_contain": [["37"], ["33"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q13", "type": "raisonnement", "source": "PDF3",
+    "question": "What are the four SCDi conflict types, and which one made up the largest share of conflict cells in 2025?",
+    "expected_answer": "Type 1 clustered high-intensity, Type 2 dispersed high-intensity, Type 3 clustered low-intensity, Type 4 dispersed low-intensity. Clustered high-intensity cells were the largest share, 67% of the 805 cells.",
+    "expected_pages": [8, 11],
+    "must_contain": [["67"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q14", "type": "francais", "source": "PDF3",
+    "question": "Combien de personnes ont été tuées dans la région depuis le début de l'insurrection de Boko Haram en 2009 ?",
+    "expected_answer": "Plus de 218 000 personnes.",
+    "expected_pages": [3],
+    "must_contain": [["218"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q15", "type": "francais", "source": "PDF3",
+    "question": "Quels pays concentrent la grande majorité des incidents violents et des victimes selon le résumé du rapport ?",
+    "expected_answer": "Le Nigeria, le Cameroun, le Mali, le Burkina Faso et le Niger.",
+    "expected_pages": [1, 3],
+    "must_contain": [["nigeria"], ["cameroun", "cameroon"], ["mali"], ["burkina"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q16", "type": "francais", "source": "PDF3",
+    "question": "Que signifie un ratio supérieur à 1 dans le tableau 1, et quel pays a le ratio événements/population le plus élevé ?",
+    "expected_answer": "Un ratio supérieur à 1 signifie que la part des événements (ou des victimes) dépasse la part de la population régionale. Le Cameroun a le ratio le plus élevé pour les événements (5,4).",
+    "expected_pages": [4, 5],
+    "must_contain": [["cameroun", "cameroon"], ["5.4", "5,4"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q17", "type": "francais", "source": "PDF3",
+    "question": "Quel modèle de prévision est utilisé pour les projections de 2026, et sur quelles données est-il calé ?",
+    "expected_answer": "Un modèle ETS (Error, Trend, Seasonality), de lissage exponentiel de type espace d'états, calé sur les données mensuelles par pays de janvier 2020 à mai 2026.",
+    "expected_pages": [17],
+    "must_contain": [["ets", "lissage exponentiel", "exponential smoothing"], ["2020"]],
+    "should_refuse": false
+  },
+  {
+    "id": "q18", "type": "piege", "source": "PDF3",
+    "question": "How many violent events were recorded in Senegal in 2025?",
+    "expected_answer": "Not in the report: Senegal is not listed separately (it is grouped with the other countries under 'Others').",
+    "expected_pages": [],
+    "must_contain": [],
+    "should_refuse": true
+  },
+  {
+    "id": "q19", "type": "piege", "source": "PDF3",
+    "question": "Quel est le montant exact du financement accordé par l'OECD/SWAC pour ce rapport ?",
+    "expected_answer": "Absent du rapport : seule la mention du financement figure dans les remerciements, sans montant.",
+    "expected_pages": [],
+    "must_contain": [],
+    "should_refuse": true
+  },
+  {
+    "id": "q20", "type": "piege", "source": "PDF3",
+    "question": "What is the capital of Australia?",
+    "expected_answer": "Hors sujet : les documents n'en parlent pas.",
+    "expected_pages": [],
+    "must_contain": [],
+    "should_refuse": true
+  }
+]
