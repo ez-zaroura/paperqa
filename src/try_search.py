@@ -18,7 +18,7 @@ def build_chunks(path, source):
 
 
 if __name__ == "__main__":
-    chunks = build_chunks("data/PDF2.pdf", "PDF2")
+    chunks = build_chunks("data/PDF3.pdf", "PDF3")
     print(len(chunks), "morceaux")
     add_chunks(chunks)
     while True:
