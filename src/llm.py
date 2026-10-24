@@ -1,25 +1,54 @@
 import os
-from time import time
+import threading
+import time
 
 from dotenv import load_dotenv
 from google import genai
 
 load_dotenv()
 
-def ask_llm(prompt, retries=3):
+
+def _call_with_timeout(fn, seconds):
+    """Lance fn() et abandonne si elle ne répond pas en `seconds` secondes."""
+    box = {}
+
+    def run():
+        try:
+            box["value"] = fn()
+        except Exception as e:  # on remonte l'erreur dans le thread principal
+            box["error"] = e
+
+    thread = threading.Thread(target=run, daemon=True)
+    thread.start()
+    thread.join(seconds)
+    if thread.is_alive():
+        raise TimeoutError(
+            f"Pas de réponse de Gemini après {seconds} s "
+            "(souvent un quota dépassé, erreur 429 : attends quelques minutes)"
+        )
+    if "error" in box:
+        raise box["error"]
+    return box["value"]
+
+
+def ask_llm(prompt, retries=3, timeout=90):
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY manquante : vérifie ton fichier .env")
     client = genai.Client(api_key=api_key)
+    model = os.getenv("MODEL_NAME")
 
     for attempt in range(retries):
         try:
-            interaction = client.interactions.create(
-                model=os.getenv("MODEL_NAME"), input=prompt
+            return _call_with_timeout(
+                lambda: client.interactions.create(model=model, input=prompt).output_text,
+                timeout,
             )
-            return interaction.output_text
         except Exception as e:
-            temporary = "503" in str(e) or "429" in str(e)
+            temporary = isinstance(e, TimeoutError) or "503" in str(e) or "429" in str(e)
             if not temporary or attempt == retries - 1:
                 raise
-            time.sleep(2 * (attempt + 1))  # attend 2 s, puis 4 s
+            wait = 2 * (attempt + 1)
+            print(f"[llm] tentative {attempt + 1}/{retries} échouée ({str(e)[:80]}), "
+                  f"nouvel essai dans {wait} s")
+            time.sleep(wait)
