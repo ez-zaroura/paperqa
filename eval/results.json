@@ -1,0 +1,336 @@
+[
+ {
+  "id": "q01",
+  "type": "factuelle",
+  "question": "How many violent events and fatalities were recorded in North Africa in 2025?",
+  "rank": 1,
+  "rank_content": 1,
+  "rag_answer": "En 2025, 413 événements violents entraînant 360 décès ont été enregistrés en Afrique du Nord (en incluant l'Algérie, la Libye, le Maroc et la Tunisie) [PDF3 p.2].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "I do not have access to real-time data or events recorded in the year 2025, as my knowledge is limited to events up to January 2025, and I cannot browse current databases (such as ACLED or armed conflict monitors) for live statistics.",
+  "base_correct": false
+ },
+ {
+  "id": "q02",
+  "type": "factuelle",
+  "question": "How many violent events and fatalities did West Africa experience in 2025?",
+  "rank": 1,
+  "rank_content": 1,
+  "rag_answer": "En 2025, l'Afrique de l'Ouest a enregistré 12 811 événements violents et 26 699 décès [PDF3 p.3].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "I do not have access to real-time data or information for the year 2025, as my knowledge cutoff is in January 2025, and I cannot provide statistics for ongoing or future events. For the most up-to-date figures on conflict and fatalities in West Africa, please consult databases like the Armed Conflict Location & Event Data Project (ACLED) or reports from the United Nations.",
+  "base_correct": false
+ },
+ {
+  "id": "q03",
+  "type": "factuelle",
+  "question": "What was the average number of fatalities per violent event in West Africa in 2024 and in 2025?",
+  "rank": 1,
+  "rank_content": 7,
+  "rag_answer": "En 2024, chaque événement violent a fait en moyenne 2,4 victimes, et en 2025, ce chiffre est tombé à 2,1 [PDF3 p.3].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "I do not have access to real-time data or the specific statistics for violent events and fatalities in West Africa for the years 2024 and 2025. To find this information, I recommend consulting recent reports from conflict monitoring organizations such as the Armed Conflict Location & Event Data Project (ACLED), the United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA), or regional bodies like ECOWAS.",
+  "base_correct": false
+ },
+ {
+  "id": "q04",
+  "type": "factuelle",
+  "question": "Which Nigerian state is the single most lethal in 2025, and how many fatalities did it record?",
+  "rank": 2,
+  "rank_content": 2,
+  "rag_answer": "En 2025, l'État de Borno est le seul État le plus meurtrier, ayant enregistré 3 856 décès [PDF3 p.4].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "I cannot answer this question because 2025 has not yet occurred, and I do not have access to real-time or future data for events in that year.",
+  "base_correct": false
+ },
+ {
+  "id": "q05",
+  "type": "factuelle",
+  "question": "How many cells does the Spatial Conflict Dynamics indicator (SCDi) grid contain, and what is the size of each cell?",
+  "rank": 3,
+  "rank_content": 3,
+  "rag_answer": "Le grille de l'indicateur Spatial Conflict Dynamics (SCDi) contient 6 540 cellules, et chaque cellule mesure 50 km par 50 km [PDF3 p.8].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Based on the standard methodology of the Spatial Conflict Dynamics indicator (SCDi), which is typically used for spatial-temporal analysis of armed conflict events (such as those derived from ACLED or similar datasets):\n\n*   **Cell Size:** The grid is usually composed of cells measuring **$0.1^\\circ \\times 0.1^\\circ$** (which is approximately $10 \\times 10\\text{ km}$ at the equator). \n*   **Number of Cells:** Because the SCDi grid is not a fixed global raster of a single size, but rather is dynamically bounded to cover the specific geographic extent of the conflict zone or country being analyzed (plus a defined buffer zone), **there is no static, universal number of cells.** The total number of cells depends entirely on the spatial extent of the specific study area. \n\n*Note: If you are referring to a specific academic paper, report, or dataset release that utilizes a fixed SCDi global grid, please provide the specific geographic region or publication so I can give you the exact count for that case.*",
+  "base_correct": false
+ },
+ {
+  "id": "q06",
+  "type": "factuelle",
+  "question": "According to Box 1, when is a cell classified as high intensity in the SCDi?",
+  "rank": 1,
+  "rank_content": 7,
+  "rag_answer": "Selon la Boîte 1, une cellule est classée comme étant de haute intensité si quatre événements ou plus se produisent au cours d'une année donnée [PDF3 p.9].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "It looks like you forgot to include Box 1 or the text you are referring to! Please provide the text or excerpt containing Box 1, and I will gladly tell you how a cell is classified as high intensity in the SCDi.",
+  "base_correct": false
+ },
+ {
+  "id": "q07",
+  "type": "factuelle",
+  "question": "How many cells were classified into one of the four SCDi conflict types in 2025, and how does that compare with 2024?",
+  "rank": 1,
+  "rank_content": 1,
+  "rag_answer": "En 2025, un total de 805 cellules ont été classées dans l'un des quatre types de conflits du SCDi [PDF3 p.10]. Cela représente une augmentation de 17 % par rapport à 2024 [PDF3 p.10].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Based on the provided text, there is no mention of \"SCDi conflict types\" or any data regarding cell classifications for the years 2024 and 2025. Therefore, I cannot answer how many cells were classified or compare the two years.",
+  "base_correct": false
+ },
+ {
+  "id": "q08",
+  "type": "factuelle",
+  "question": "What are the 2026 projections for total violent events and fatalities across the 21 study countries?",
+  "rank": 1,
+  "rank_content": 1,
+  "rag_answer": "Pour 2026, les projections indiquent que le nombre total d'événements violents à travers les 21 pays de l'étude atteindra environ 15 400 (soit une augmentation de 17 % par rapport aux 13 200 événements enregistrés en 2025) [PDF3 p.17]. Le nombre de décès projeté est d'environ 32 500, ce qui représente une hausse de 20 % par rapport aux 27 000 décès enregistrés en 2025 [PDF3 p.17].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "I cannot answer this question because I do not have access to real-time information, proprietary databases, or specific datasets covering projections for 2026 across a defined set of 21 study countries.",
+  "base_correct": false
+ },
+ {
+  "id": "q09",
+  "type": "raisonnement",
+  "question": "Why does the report say per-event lethality in West Africa is declining, and what share of events and fatalities does the Central Sahelian conflict zone account for?",
+  "rank": 1,
+  "rank_content": 1,
+  "rag_answer": "Le rapport indique que la létalité par événement diminue en raison des conflits qui s'étendent vers de nouveaux emplacements où la violence peut être fréquente mais moins intense, tandis que les zones de conflit principales restent extrêmement meurtrières [PDF3 p.3]. \n\nEn outre, la zone de conflit du Sahel central représente 26 % des événements régionaux et 44 % des décès [PDF3 p.3], ou plus précisément 25 % de l'ensemble des événements et 39 % de l'ensemble des décès enregistrés en Afrique du Nord et de l'Ouest [PDF3 p.3].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Based on recent data and reports from conflict-monitoring organizations (such as the Armed Conflict Location & Event Data Project - ACLED), here are the answers to your questions regarding conflict trends in West Africa and the Central Sahel:\n\n### 1. Why is per-event lethality in West Africa declining?\nThe report indicates that while political violence and the total number of violent events have generally been **increasing** in West Africa, the **lethality per event is declining**. This trend is primarily driven by:\n\n* **Shifting Tactics of Armed Groups:** Militant groups (such as Jama'at Nasr al-Islam wal Muslimin [JNIM] and Islamic State affiliates) are increasingly engaging in tactics that do not always result in mass casualties. These include abductions, looting, taxation, property destruction, and territorial consolidation rather than direct, high-fatality engagements with state security forces or rival groups.\n* **Expansion into Low-Density Areas:** Violence has spatially expanded into coastal West African countries (such as Benin, Togo, and Côte d'Ivoire) and peripheral rural areas. Conflicts in these new zones often involve smaller-scale skirmishes, hit-and-run attacks, or intimidation tactics rather than the large-scale battles seen previously in the heartland of the Sahel.\n* **Improved Defense and Fortification:** State militaries and local self-defense groups have increasingly fortified towns and military outposts. While attacks on these positions still occur, better defenses often prevent the total overrun of bases, thereby limiting the extreme casualty counts associated with historical mass-casualty attacks.\n\n---\n\n### 2. What share of events and fatalities does the Central Sahel account for?\nThe Central Sahel (primarily comprising **Burkina Faso, Mali, and Niger**) is currently the epicenter of violence in the broader West African region. According to regional conflict reports:\n\n* **Share of Conflict Events:** The Central Sahel typically accounts for the vast majority—**roughly 70% to 80%**—of all political violence events recorded in the West African region.\n* **Share of Fatalities:** The region is even more disproportionately lethal, regularly accounting for **over 80% to 85%** of all conflict-related fatalities in West Africa. \n\n*(Note: Exact percentages fluctuate slightly depending on the specific quarterly or annual report from monitoring bodies like ACLED, but the Central Sahel consistently represents the overwhelming majority of both violent incidents and deaths compared to the Lake Chad basin, the Gulf of Guinea, or other sub-regions.)*",
+  "base_correct": false
+ },
+ {
+  "id": "q10",
+  "type": "raisonnement",
+  "question": "How do the 2026 projections for Mali and Burkina Faso differ?",
+  "rank": 1,
+  "rank_content": null,
+  "rag_answer": "Les projections pour 2026 indiquent que les trajectoires de mortalité (fatalities) du Mali et du Burkina Faso divergent nettement :\n* **Le Mali** : Les décès projetés devraient augmenter de plus de 40 % par rapport à 2025, entraînant une létalité par événement parmi les plus élevées de la région [PDF3 p.18].\n* **Le Burkina Faso** : Les décès projetés s'inscrivent dans la continuité d'une baisse de 30 % déjà enregistrée entre 2024 et 2025, ce qui réduit de moitié le bilan annuel des morts en deux ans [PDF3 p.18].",
+  "rag": {
+   "correct": false,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": true,
+   "citation_ok": true
+  },
+  "base_answer": "As of mid-2024, long-term economic, security, and demographic projections for the year 2026 for **Mali** and **Burkina Faso**—both governed by military juntas that came to power via coups and formed the **Alliance of Sahel States (AES)**—show significant similarities in their immediate challenges, but distinct trajectories in their economic outlooks, governance structures, and international relations. \n\nHere is how the 2026 projections for the two countries differ across key domains:\n\n---\n\n### 1. Economic Outlook and Growth Projections\nWhile both nations have suffered economically from instability, trade disruptions, and withdrawal from the Economic Community of West African States (ECOWAS), international financial institutions (like the IMF and World Bank) project a notably stronger recovery for Mali than for Burkina Faso by 2026.\n\n*   **Mali (Moderate Growth & Mining Resilience):** \n    *   Mali’s GDP growth is projected to stabilize and hover around **4.5% to 5% by 2026**, assuming moderate improvements in gold production and cotton harvesting. \n    *   Mali has managed to keep its major industrial gold mines operating despite geopolitical tensions, providing a consistent revenue buffer.\n*   **Burkina Faso (Lower Growth & Severe Fiscal Strain):** \n    *   Burkina Faso’s economic growth for 2026 is projected to be more sluggish, likely remaining **below 4%**. \n    *   The country faces a much more acute fiscal crisis. Continuous attacks on supply routes, destruction of infrastructure, and the displacement of a significant portion of its agrarian population have severely crippled agricultural output and tax collection. \n\n### 2. Security and Territorial Control\nBoth nations are battling severe jihadist insurgencies (linked to JNIM and Islamic State in the Greater Sahara), but their military strategies and projected territorial control by 2026 differ.\n\n*   **Mali (Focus on Northern Sovereignty and Wagner/AES Operations):** \n    *   Mali’s security projections are heavily tied to regaining control over the rebellious northern regions (specifically Kidal) with the help of Russian paramilitary forces (formerly Wagner, now rebranded as Africa Corps). \n    *   By 2026, Mali is projected to remain locked in asymmetric warfare in the north and center, with the state maintaining urban centers but struggling to eradicate rural insurgent networks.\n*   **Burkina Faso (Internal Fragmentation and Self-Defense Forces):** \n    *   Burkina Faso is in a more precarious security position, with estimates suggesting that militant groups control or heavily influence roughly **40% to 50% of the national territory**. \n    *   By 2026, projections suggest Burkina Faso will rely increasingly on civilian auxiliary forces (VDPs) and Russian security assistance. The risk of the state contracting further around the capital, Ouagadougou, and major transit corridors is higher in Burkina Faso than in Mali.\n\n### 3. Political Trajectories and Transition Timelines\nBoth military juntas have repeatedly delayed democratic transitions, but their domestic political consolidation differs.\n\n*   **Mali (Institutionalized Junta Rule):** \n    *   Mali’s junta, led by Colonel Assimi Goïta, has integrated itself deeply into the state apparatus. By 2026, Mali is projected to operate as a firmly entrenched military-led regime with little space for civilian opposition or independent media. The \"transition back to civilian rule\" has been indefinitely postponed in practice.\n*   **Burkina Faso (Populist Mobilization and Extreme Press Crackdowns):** \n    *   Captain Ibrahim Traoré’s regime in Burkina Faso relies heavily on fervent populist and anti-imperialist support, particularly among urban youth. \n    *   By 2026, projections indicate a tighter internal security clampdown, with widespread conscription, forced mobilization of political dissidents and journalists, and potential internal fractures within the military due to battlefield exhaustion.\n\n### 4. Humanitarian Crises and Displacement\n*   **Burkina Faso (The Worse Humanitarian Outlook):** \n    *   Burkina Faso has become one of the fastest-growing displacement crises in the world, with over two million internally displaced persons (IDPs). Projections for 2026 indicate that this humanitarian catastrophe will likely worsen or remain at critical levels, with high risks of localized famine in besieged northern and eastern towns.\n*   **Mali:** \n    *   While Mali also faces hundreds of thousands of displaced persons and severe food insecurity in the north, the geographic concentration of the crisis is somewhat more contained compared to Burkina Faso's nationwide agrarian disruption.\n\n### Summary of Differences\nIn short, while **both countries will remain authoritarian, Russia-aligned, anti-Western states outside of ECOWAS in 2026**, **Mali** is projected to have a slightly more resilient macroeconomic foundation (anchored by its gold sector) and a slightly more consolidated central government. **Burkina Faso** enters 2026 facing a more existential threat regarding territorial integrity, acute humanitarian suffering, and a severely depleted national treasury.",
+  "base_correct": false
+ },
+ {
+  "id": "q11",
+  "type": "raisonnement",
+  "question": "Cameroon has more violent events than Burkina Faso and Mali, yet fewer fatalities. What explains this?",
+  "rank": 2,
+  "rank_content": 2,
+  "rag_answer": "La crise anglophone (Anglophone Crisis), centrée sur les régions du Nord-Ouest et du Sud-Ouest, implique une forte fréquence d'incidents avec des niveaux de létalité par événement très bas, un schéma qui correspond aux tactiques de guérilla et aux représailles qui caractérisent ce conflit [PDF3 p.6].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "The premise of your question touches on a well-documented phenomenon in African conflict studies: **high-frequency, lower-lethality violence** compared to **lower-frequency, high-lethality massacres**. \n\nAccording to data from conflict-tracking organizations like the Armed Conflict Location & Event Data Project (ACLED), Cameroon often records a high number of violent incidents (clashes, protests, improvised explosive device attacks), while Burkina Faso and Mali frequently record higher death tolls, driven heavily by mass-casualty attacks on civilians and large-scale military engagements.\n\nSeveral interconnected factors explain this discrepancy:\n\n### 1. Nature of the Conflicts (Asymmetry and Objectives)\n*   **Cameroon (The Anglophone Crisis & Boko Haram):** In the Anglophone regions, the conflict is largely an insurgency fought by decentralized separatist militias against the state. Tactics frequently involve guerrilla warfare, ambushes, kidnappings, sabotage, and small-scale skirmishes. While these generate a high *volume* of security incidents, they often result in single-digit casualties per event. In the Far North, Boko Haram and ISWAP engage in asymmetric tactics (IEDs, cattle raiding, village lootings) that cause steady attrition rather than mass-scale extermination.\n*   **Sahel (Burkina Faso and Mali):** The conflicts in Mali and Burkina Faso are heavily driven by sprawling jihadist groups affiliated with al-Qaeda (JNIM) and the Islamic State (ISGS). These groups frequently engage in territorial conquest, large-scale sieges of towns, and punitive massacres of civilians suspected of collaborating with the state or rival self-defense groups. A single attack on a village in Burkina Faso (such as the Solhan massacre in 2021) can instantly claim over 100 lives, heavily skewing the lethality-per-event ratio.\n\n### 2. State Capacity and Military Engagement\n*   **Cameroon:** The Cameroonian government, led by President Paul Biya, maintains a relatively entrenched and centralized security apparatus. Elite units, such as the Rapid Intervention Battalion (BIR), maintain a constant presence, engaging separatists in frequent, localized firefights that tend to result in limited casualties on both sides compared to the wholesale collapse of state security seen in parts of the Sahel.\n*   **Sahel:** Both Mali and Burkina Faso have experienced recent military coups largely triggered by the state's inability to secure rural areas. The security vacuums in these countries allowed jihadist groups to operate with impunity over vast territories, leading to high-fatality clashes with poorly equipped national armies and poorly trained civilian volunteer forces (like the VDP in Burkina Faso).\n\n### 3. Civilian Self-Defense and Communal Violence\nIn Mali and Burkina Faso, violence often intersects with pre-existing ethnic and communal tensions (e.g., between pastoralist Fulani communities and agriculturalist groups like the Dogon or Mossi). Jihadist groups have weaponized these local grievances, leading to brutal inter-communal massacres where entire villages are wiped out. \n\nWhile Cameroon has ethnic dimensions to its conflicts—particularly in the Far North (herder-farmer conflicts) and the North-West/South-West (marginalization of Anglophones)—the violence is less frequently characterized by the large-scale, retaliatory ethnic mass exterminations seen in the central Sahel.\n\n### 4. Reporting and Data Capture\nConflict data is notoriously difficult to verify in remote areas. \n*   In Cameroon's Anglophone regions, access is heavily restricted for international journalists and NGOs, meaning some high-fatality events may go underreported, though ACLED and human rights groups capture a very high volume of localized security incidents.\n*   In the Sahel, the sheer scale of displaced populations and abandoned territories means that while many massacres are documented, the full death toll of remote siege tactics and starvation strategies is often catastrophic.\n\n### Summary\nCameroon has a high number of violent events because of the persistent, chronic, and widespread nature of the Anglophone insurgency and Boko Haram's enduring asymmetric campaign. However, Burkina Faso and Mali suffer **higher fatalities** because the dominant conflict actors there (particularly Islamist insurgent groups and regional militias) more frequently employ tactics designed for mass slaughter, territorial subjugation, and the destruction of entire communities.",
+  "base_correct": true
+ },
+ {
+  "id": "q12",
+  "type": "raisonnement",
+  "question": "How did the initial state of newly affected conflict cells in 2025 differ from the historical average?",
+  "rank": 2,
+  "rank_content": 2,
+  "rag_answer": "Historiquement, environ 33 % des nouveaux emplacements touchés entraient directement dans un conflit groupé de haute intensité (CH), mais en 2025, ce chiffre est passé à 37 %, s'ajoutant à un taux d'entrée de 7 % pour les conflits dispersés de haute intensité (DH) [PDF3 p.14]. De plus, alors qu'entre 1997 et 2024 la violence politique émergeait généralement selon un mode de faible intensité (avec environ 67 % des nouvelles cellules entrant en tant que cellules groupées de faible intensité - CL - ou dispersées de faible intensité - DL), la proportion combinée de ces entrées à faible intensité n'était que de 56 % (35 % de CL et 21 % de DL) en 2025 pour l'Afrique du Nord et de l'Ouest [PDF3 p.13].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Based on the provided document, there is no mention of the year 2025 or any comparison between the initial state of newly affected conflict cells in 2025 and the historical average.",
+  "base_correct": false
+ },
+ {
+  "id": "q13",
+  "type": "raisonnement",
+  "question": "What are the four SCDi conflict types, and which one made up the largest share of conflict cells in 2025?",
+  "rank": 4,
+  "rank_content": 4,
+  "rag_answer": "Les quatre types de conflits du SCDi sont :\n1. Les cellules à forte intensité et groupées (Clustered high-intensity cells ou CH) [PDF3 p.8, p.10, p.11].\n2. Les cellules à faible intensité et groupées (Clustered low-intensity cells ou CL) [PDF3 p.10, p.11].\n3. Les cellules à forte intensité et dispersées (Dispersed high-intensity cells ou DH) [PDF3 p.10, p.11].\n4. Les cellules à faible intensité et dispersées (Dispersed low-intensity cells ou DL) [PDF3 p.9, p.10].\n\nEn 2025, ce sont les cellules à forte intensité et groupées (CH) qui ont représenté la plus grande part des cellules de conflit, comptant pour 67 % du total [PDF3 p.11].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Based on the Social Conflict in Africa database (SCDi) framework—which is developed by the Armed Conflict Location & Event Data Project (ACLED)—the four main types of social conflict are:\n\n1. **Labor and Trade Disputes** (strikes, workplace protests, and trade-related unrest)\n2. **Land and Environmental Disputes** (conflicts over natural resources, land grabs, and environmental issues)\n3. **Factional Struggles** (power struggles and infighting within political parties, rebel groups, or armed factions)\n4. **Identity Conflicts** (disputes driven by ethnic, religious, or communal identities)\n\nRegarding the second part of your question about **2025**, my knowledge cutoff is **January 2025**, and I do not have access to real-time data or empirical reports published throughout 2025. Therefore, I cannot provide the specific statistical breakdown or identify which SCDi conflict type held the largest share of conflict cells for that year.",
+  "base_correct": false
+ },
+ {
+  "id": "q14",
+  "type": "francais",
+  "question": "Combien de personnes ont été tuées dans la région depuis le début de l'insurrection de Boko Haram en 2009 ?",
+  "rank": 4,
+  "rank_content": 4,
+  "rag_answer": "Plus de 218 000 personnes ont été tuées dans la région depuis le début de l'insurrection de Boko Haram en 2009 [PDF3 p.3].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Depuis le début de l'insurrection de Boko Haram en 2009, le conflit a fait **plus de 35 000 à 40 000 morts directes** (principalement au Nigeria, mais aussi dans les pays voisins du bassin du lac Tchad : le Cameroun, le Tchad et le Niger). \n\nCependant, ce chiffre ne reflète qu'une partie de la tragédie humaine. Selon les estimations des agences des Nations unies (notamment le PNUD), le nombre total de décès dépasse **350 000 personnes** si l'on prend en compte les **morts indirectes**. Celles-ci sont causées par les crises humanitaires induites par le conflit :\n* La famine et la malnutrition sévère.\n* Les maladies évitables dues à la destruction des infrastructures de santé et d'eau potable.\n* Les déplacements massifs de population (plus de 3 millions de déplacés internes et de réfugiés).\n\nIl est donc difficile de donner un chiffre unique et précis, les bilans variant selon les sources (ONG, gouvernements, ONU), mais l'impact global se compte en centaines de milliers de vies perdues.",
+  "base_correct": false
+ },
+ {
+  "id": "q15",
+  "type": "francais",
+  "question": "Quels pays concentrent la grande majorité des incidents violents et des victimes selon le résumé du rapport ?",
+  "rank": 3,
+  "rank_content": 3,
+  "rag_answer": "Selon le rapport, quatre pays d'Afrique de l'Ouest (le Nigéria, le Mali, le Burkina Faso et le Niger) ainsi que le Cameroun concentrent 92 % des événements violents et 95 % des victimes en 2025 [PDF3 p.3].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Il semble que votre question fasse référence à un rapport spécifique (par exemple sur les conflits armés, le terrorisme, les homicides ou les violences politiques), mais **vous n'avez pas inclus le texte du résumé** dans votre message. \n\nPourriez-vous me fournir le texte ou préciser de quel rapport il s'agit ? Une fois que vous me l'aurez partagé, je pourrai vous indiquer quels pays y sont mentionnés comme concentrant la majorité des incidents et des victimes.",
+  "base_correct": false
+ },
+ {
+  "id": "q16",
+  "type": "francais",
+  "question": "Que signifie un ratio supérieur à 1 dans le tableau 1, et quel pays a le ratio événements/population le plus élevé ?",
+  "rank": 3,
+  "rank_content": 3,
+  "rag_answer": "Un ratio supérieur à 1 dans le tableau 1 signifie que les événements violents ou les décès qui en résultent sont plus élevés que ce que la part de la population régionale ne le suggérerait [PDF3 p.4]. \n\nLe pays qui a le ratio événements/population le plus élevé est le Cameroun, avec un ratio de 5,4 [PDF3 p.5].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Il semble que vous ayez oublié d'inclure le **tableau 1** dans votre message ! \n\nPour que je puisse vous répondre précisément :\n1. **De quel sujet ou rapport s'agit-il ?** (Par exemple, un rapport sur les catastrophes naturelles, les accidents de la route, les événements sportifs, etc.)\n2. **Pourriez-vous copier-coller ou décrire le contenu du tableau 1 ?**\n\n---\n\nCependant, de manière générale :\n\n* **Que signifie un ratio supérieur à 1 ?**\n  Un ratio (ou rapport) est le résultat d'une division entre deux nombres (ici : $\\frac{\\text{Nombre d'événements}}{\\text{Population}}$). Un ratio supérieur à 1 signifie simplement qu'il y a **plus d'événements enregistrés que d'habitants** dans la zone ou le pays concerné. \n  *(Note : Dans le contexte démographique ou épidémiologique, si la population et les événements sont comptés de la même manière, cela peut arriver si l'unité de mesure de la population est très petite, par exemple \"pour 1 habitant\", ou s'il y a eu plusieurs événements par personne sur la période).*\n\n* **Quel pays a le ratio le plus élevé ?**\n  Je ne peux pas le deviner sans voir les données du tableau 1. \n\n**Veuillez fournir les données du tableau 1 et je me ferai un plaisir de vous donner la réponse exacte !**",
+  "base_correct": false
+ },
+ {
+  "id": "q17",
+  "type": "francais",
+  "question": "Quel modèle de prévision est utilisé pour les projections de 2026, et sur quelles données est-il calé ?",
+  "rank": 1,
+  "rank_content": 2,
+  "rag_answer": "Les projections pour 2026 sont générées en appliquant un modèle de lissage exponentiel de type ETS (Error, Trend, and Seasonality) [PDF3 p.17]. Ce modèle de séries temporelles est calé sur des données mensuelles historiques concernant les événements et les décés, allant de janvier 2020 à mai 2026 [PDF3 p.17].",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": true
+  },
+  "base_answer": "Pour pouvoir vous répondre précisément, **pourriez-vous préciser de quel domaine ou de quel sujet vous parlez ?** \n\nLes projections pour 2026 et les modèles utilisés varient totalement selon le domaine :\n\n* **Climatologie / Météorologie** (ex. : températures, émissions de CO2)\n* **Économie / Finance** (ex. : prévisions de croissance du PIB, inflation par le FMI ou les banques centrales)\n* **Démographie** (ex. : projections de population par l'INSEE ou l'ONU)\n* **Énergie** (ex. : prévisions de consommation d'électricité ou de pétrole)\n* **Technologie / IA** (ex. : évolution des capacités des modèles de langage)\n\nDès que vous m'indiquerez le sujet exact, je pourrai vous donner le modèle et les jeux de données utilisés pour son calibrage !",
+  "base_correct": false
+ },
+ {
+  "id": "q18",
+  "type": "piege",
+  "question": "How many violent events were recorded in Senegal in 2025?",
+  "rank": null,
+  "rank_content": null,
+  "rag_answer": "Je ne trouve pas la réponse dans les documents.",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": null
+  }
+ },
+ {
+  "id": "q19",
+  "type": "piege",
+  "question": "Quel est le montant exact du financement accordé par l'OECD/SWAC pour ce rapport ?",
+  "rank": null,
+  "rank_content": null,
+  "rag_answer": "Je ne trouve pas la réponse dans les documents.",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": null
+  }
+ },
+ {
+  "id": "q20",
+  "type": "piege",
+  "question": "What is the capital of Australia?",
+  "rank": null,
+  "rank_content": null,
+  "rag_answer": "Je ne trouve pas la réponse dans les documents.",
+  "rag": {
+   "correct": true,
+   "false_refusal": false,
+   "hallucination": false,
+   "wrong": false,
+   "citation_ok": null
+  }
+ }
+]
