@@ -31,7 +31,7 @@ def _call_with_timeout(fn, seconds):
     return box["value"]
 
 
-def ask_llm(prompt, retries=3, timeout=90):
+def ask_llm(prompt, retries=4, timeout=120):
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY manquante : vérifie ton fichier .env")
@@ -48,7 +48,7 @@ def ask_llm(prompt, retries=3, timeout=90):
             temporary = isinstance(e, TimeoutError) or "503" in str(e) or "429" in str(e)
             if not temporary or attempt == retries - 1:
                 raise
-            wait = 2 * (attempt + 1)
+            wait = 10 * (attempt + 1)  # modèle surchargé : on laisse le temps de se calmer
             print(f"[llm] tentative {attempt + 1}/{retries} échouée ({str(e)[:80]}), "
                   f"nouvel essai dans {wait} s")
             time.sleep(wait)
