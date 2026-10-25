@@ -1,8 +1,14 @@
+"""Évalue PaperQA sur eval/questions.json
+Les réponses du LLM sont gardées dans eval/cache.json : relancer ne consomme pas de quota.
+SUPPRIME eval/cache.json (ou utilise --fresh) dès que tu changes le prompt, le modèle,
+le découpage en chunks ou le modèle d'embeddings.
+"""
 import argparse
 import json
 import os
 import re
 import time
+import unicodedata
 from pathlib import Path
 
 from src.index import search
@@ -25,17 +31,19 @@ PAUSE = 1.0  # secondes d'attente après chaque appel au LLM (modifiable avec --
 # ---------- outils de notation ----------
 def norm(text):
     text = text.replace(" ", " ").replace(" ", " ").lower()
+    text = unicodedata.normalize("NFD", text)  # "Nigéria" == "Nigeria" : on ignore les accents
+    text = "".join(c for c in text if not unicodedata.combining(c))
     return re.sub(r"\s+", " ", text)
 
 
 def is_refusal(text):
-    return REFUSAL in norm(text)
+    return norm(REFUSAL) in norm(text)
 
 
 def contains_all(text, groups):
     """Chaque groupe est une liste de variantes : au moins une doit apparaître."""
     t = norm(text)
-    return all(any(alt.lower() in t for alt in group) for group in groups)
+    return all(any(norm(alt) in t for alt in group) for group in groups)
 
 
 def cited_pages(text):
@@ -85,7 +93,10 @@ def load_cache():
 
 def cached(cache, key, fn):
     if key not in cache:
+        print(f"   ... appel au LLM ({key.split('|')[0]}), peut durer 30 à 60 s", flush=True)
+        start = time.time()
         cache[key] = fn()
+        print(f"   ... réponse reçue en {time.time() - start:.0f} s", flush=True)
         CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
         time.sleep(PAUSE)  # on ménage le quota gratuit
     return cache[key]
