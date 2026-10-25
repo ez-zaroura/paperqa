@@ -1,9 +1,10 @@
+# PaperQA
 
 Assistant de questions-réponses sur des articles de recherche (PDF) : il retrouve les passages
 pertinents, les donne à un LLM (Gemini) et répond **en citant le fichier et la page**.
 Si la réponse n'est pas dans les documents, il le dit au lieu d'inventer.
 
-Projet personnel (octobre 2026) pour apprendre à construire un système RAG de bout en bout :
+Projet personnel (octobre 2026, en cours) pour apprendre à construire un système RAG de bout en bout :
 ingestion, recherche vectorielle, génération, API, tests et **évaluation chiffrée**.
 
 ## Comment ça marche
@@ -37,6 +38,10 @@ eval/
   questions.json   20 questions annotées (réponse, pages, mots-clés attendus)
   run_eval.py      mesure la recherche et les réponses (avec / sans RAG)
   inspect_question.py   montre ce que la recherche renvoie pour une question
+  show_answers.py       affiche les réponses jugées fausses à côté de l'attendu
+  results.md / .json    résultats de la dernière évaluation complète
+docs/
+  rapport.tex           rapport technique (LaTeX)
 tests/             tests unitaires (pytest)
 ```
 
@@ -113,21 +118,36 @@ autre paragraphe et classé trop bas. Avec 1200/200, la réponse est correcte.
 Limite : la mesure exige que tous les chiffres attendus soient dans le même morceau, ce qui
 avantage un peu les grands morceaux.
 
-### Résultat 2 : avec et sans RAG
+### Résultat 2 : évaluation complète (20 questions, k = 8, `gemini-3.5-flash-lite`)
 
-Sur q01 à q03, le LLM seul (sans documents) répond que les chiffres de 2025 « ne sont pas encore
-disponibles » ou invente une valeur (2,3 à 2,9 décès par événement, alors que le rapport donne 2,1).
-Avec RAG, les trois réponses sont correctes et citent la bonne page.
+| Mesure | Avec RAG | Sans RAG (LLM seul) |
+|---|---|---|
+| Réponses correctes (17 questions avec réponse) | **16/17 (94 %)** | 1/17 (6 %) |
+| Refus à tort | 0/17 | - |
+| Réponses fausses | 1/17 | - |
+| Citation de la bonne page | 17/17 (100 %) | - |
+| Pièges bien refusés (3 questions sans réponse dans le document) | 3/3, aucune invention | - |
 
-<!-- À COMPLÉTER après `python -m eval.run_eval` (résultats complets, 20 questions) -->
+Par type de question (avec RAG) : factuelles 8/8, en français sur texte anglais 4/4, raisonnement 4/5.
+Recherche (k = 8) : la bonne page est retrouvée 17 fois sur 17 ; le morceau qui contient la réponse
+est retrouvé 16 fois sur 17 (hit@8 contenu, 94 %). Détails : `eval/results.md`, `eval/results.json`.
 
-| Mesure | Valeur |
-|---|---|
-| Réponses correctes avec RAG | ?/17 |
-| Refus à tort | ?/17 |
-| Citation sur la bonne page | ?/? |
-| Pièges bien refusés | ?/3 |
-| Réponses correctes sans RAG | ?/17 |
+**Lecture du « sans RAG »** : le rapport date de 2026, donc le LLM seul ne peut pas connaître ses
+chiffres et répond qu'ils ne sont pas disponibles ou en invente. Ce 1/17 montre surtout l'intérêt du
+RAG pour des documents récents ou privés ; ce n'est pas une comparaison générale « RAG contre LLM ».
+Le seul point trouvé sans RAG est une question d'explication (pourquoi la crise anglophone donne
+beaucoup d'incidents peu mortels), qui ne demande pas de chiffre.
+
+**Une erreur restante (q10)** : « comment diffèrent les projections 2026 du Mali et du Burkina Faso ? ».
+Le système répond « plus de 40 % » et « baisse de 30 % », fidèle au texte retrouvé, alors que le rapport
+donne 42 % et 27 % (probablement dans un tableau qui n'est pas dans les 8 morceaux retrouvés). Je la
+garde comme erreur : c'est une vraie limite de la recherche sur les tableaux.
+
+**Corrections de la notation** : après le premier passage complet, 2 des 3 réponses jugées fausses
+l'étaient à cause de ma notation automatique, pas du système : un mot-clé écrit sans accent
+(« Nigeria » / « Nigéria », la comparaison ignore maintenant les accents) et un chiffre exigé alors que
+la question demandait une explication (q11, mots-clés remplacés par `anglophone` + `guérilla`).
+Résultat avant correction : 14/17 ; après : 16/17. Les réponses elles-mêmes n'ont pas changé.
 
 ## Ce que j'ai appris / problèmes rencontrés
 
@@ -142,8 +162,9 @@ Avec RAG, les trois réponses sont correctes et citent la bonne page.
 
 ## Limites
 
-- Évaluation sur un seul rapport et 17 questions avec réponse : les pourcentages sont à lire comme
-  des ordres de grandeur ; la notation par mots-clés est stricte et demande une relecture manuelle.
+- Évaluation sur un seul rapport, un seul modèle et 17 questions avec réponse, que j'ai écrites moi-même :
+  les pourcentages sont des ordres de grandeur, pas des garanties. La notation par mots-clés est
+  imparfaite (voir les corrections ci-dessus) et demande une relecture manuelle des erreurs.
 - Pas de gestion des PDF scannés (pas d'OCR) ; tableaux et figures sont lus comme du texte brut.
 - Modèle d'embeddings orienté anglais : questions en français sur texte anglais non optimisées.
 
