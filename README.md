@@ -33,6 +33,8 @@ src/
   llm.py           appel à Gemini (délai maximum, réessais)
   rag.py           construction du prompt et réponse avec sources
   api.py           API FastAPI (POST /ask, GET /health)
+  mcp_server.py    serveur MCP : la recherche exposée comme outil pour un assistant IA
+  try_mcp_client.py  petit client pour tester le serveur MCP
   try_*.py         petits scripts de test manuel
 eval/
   questions.json   20 questions annotées (réponse, pages, mots-clés attendus)
@@ -84,7 +86,24 @@ In 2025, 413 violent events resulting in 360 fatalities were recorded in North A
 across Algeria, Libya, Morocco, and Tunisia [PDF3 p.2].
 ```
 
-Tests : `python -m pytest` (11 tests, sans appel réseau).
+Tests : `python -m pytest` (16 tests, sans appel réseau).
+
+### Serveur MCP (optionnel)
+
+`src/mcp_server.py` expose la recherche comme outil [MCP](https://modelcontextprotocol.io) :
+un assistant IA compatible (Claude Desktop, Claude Code...) peut appeler `search_papers` et
+`list_documents`, puis rédiger lui-même la réponse à partir des passages et de leurs pages.
+
+```powershell
+python -m src.try_mcp_client "votre question"   # test sans client MCP installé
+```
+
+Exemple de configuration d'un client (adapter les chemins) :
+
+```json
+{"mcpServers": {"paperqa": {"command": "C:\\chemin\\paperqa\\.venv\\Scripts\\python.exe",
+                            "args": ["-m", "src.mcp_server"]}}}
+```
 
 ## Évaluation
 

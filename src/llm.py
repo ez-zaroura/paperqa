@@ -1,4 +1,5 @@
 import os
+import sys
 import threading
 import time
 
@@ -50,5 +51,5 @@ def ask_llm(prompt, retries=4, timeout=120):
                 raise
             wait = 10 * (attempt + 1)  # modèle surchargé : on laisse le temps de se calmer
             print(f"[llm] tentative {attempt + 1}/{retries} échouée ({str(e)[:80]}), "
-                  f"nouvel essai dans {wait} s")
+                  f"nouvel essai dans {wait} s", file=sys.stderr)
             time.sleep(wait)
